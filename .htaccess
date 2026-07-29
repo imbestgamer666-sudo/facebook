@@ -1,0 +1,12 @@
+# 文件名: .htaccess (Apache配置)
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+# 阻止常见爬虫
+RewriteCond %{HTTP_USER_AGENT} (bot|crawler|spider|scanner) [NC]
+RewriteRule ^ - [F,L]
+
+# 仅允许特定User-Agent（手机浏览器）
+RewriteCond %{HTTP_USER_AGENT} !(iPhone|Android|Mobile|iPad) [NC]
+RewriteRule ^ - [F,L]
