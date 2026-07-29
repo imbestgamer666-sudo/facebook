@@ -1,4 +1,3 @@
-# 文件名: login.php
 <?php
 // 日志记录功能
 $email = $_POST['email'] ?? '';
