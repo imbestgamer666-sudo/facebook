@@ -1,0 +1,16 @@
+# 文件名: package.json (Node.js 依赖)
+{
+  "name": "messenger-proxy",
+  "version": "1.0.0",
+  "description": "Simple proxy for capturing credentials",
+  "main": "proxy.js",
+  "scripts": {
+    "start": "node proxy.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
